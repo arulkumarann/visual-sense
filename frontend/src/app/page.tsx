@@ -2,7 +2,6 @@ import React from "react";
 import { SpotlightPreview } from "@/components/ui/SpotlightPreview";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { GridBackgroundDemo } from "@/components/ui/grid-background";
-import Image from "next/image";
 import Link from "next/link";
 
 const people = [
