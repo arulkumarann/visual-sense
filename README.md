@@ -16,6 +16,16 @@ developing a web application that utilizes Visual Question Answering (VQA) techn
   <img src="https://github.com/arul-5/visual-sense/assets/113288547/673b28c0-2042-436e-bfc7-1b01f3d804e6" alt="VisualSense">
 </p>
 
+<h2>Features:</h2>
+* Real-time Image Analysis: Instantly analyze images from the device's camera. 
+* Interactive Questioning: Users ask questions about image content using natural language. 
+* AI-driven Answering: Spoken answers generated based on image analysis and user queries. 
+* Flexible Image Upload: Ability to upload images for analysis from device storage. 
+* Accessibility Features: User-friendly interface with compatibility for screen readers. 
+* Promotes Independence: Empowers visually impaired individuals to access visual information independently. 
+* Inclusion: Reduces reliance on sighted assistance, fostering greater inclusion.
+
+
 
 <h2>🛠 Installation Steps:</h2>
 
