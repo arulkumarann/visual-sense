@@ -12,28 +12,28 @@ developing a web application that utilizes Visual Question Answering (VQA) techn
 
 <p>1. Front-End</p>
 
-
+```
 cd frontend
+```
 
 
-
-
+```
 npm i
+```
 
-
-
+```
 npm run dev
-
+```
 
 <p>2. Back-End</p>
 
-
+```
 cd backend
+```
 
-
-
+```
 uvicorn index:app --reload
-
+```
 
 <h2>💻 Built with</h2>
 
