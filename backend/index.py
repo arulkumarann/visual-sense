@@ -1,6 +1,9 @@
 from fastapi import FastAPI, Request,UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from PIL import Image
+import requests
+import model
 
 app = FastAPI()
 app.add_middleware(
@@ -27,3 +30,9 @@ async def upload(file_uploads:list[UploadFile]):
             f.write(data)
         filenames.append(save_file)
         return JSONResponse({"Filenames":filenames})
+    
+@app.post("/predict")
+async def predict(text:str, image_loc : str):
+    image = Image.open(requests.get(image_loc, stream = True).raw)
+    pred = model.predict_text_and_image(text,image)
+    return pred
