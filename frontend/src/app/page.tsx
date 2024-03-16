@@ -41,12 +41,12 @@ export default function Home() {
       <GridBackgroundDemo />
       <main className="flex flex-col bg-black absolute inset-0">
         <SpotlightPreview />
-        <div className="flex flex-row items-center justify-center mb-5 w-full">
+        <div className="flex flex-row items-center justify-center mb-5 w-fit mx-auto z-10 bg-transparent">
           <AnimatedTooltip items={people} />
         </div>{" "}
         <Link
           className="flex self-end justify-center gap-2 items-center h-fit w-fit border border-white/10 rounded-md p-3 px-10 m-3 absolute z-10"
-          href="/dashboard"
+          href="/choice"
         >
           {/* Adjust z-index here */}
 

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { IoMdCamera, IoMdMic, IoMdSend } from "react-icons/io";
 import { FaPlus } from "react-icons/fa";
 
-const ChatApp = () => {
+const Glaucoma = () => {
   const [file, setFile] = useState(null);
   const [prompt, setPrompt] = useState("");
   const [messages, setMessages] = useState([]);
@@ -197,57 +197,69 @@ const ChatApp = () => {
   };
 
   return (
-    <div className="no-scrollbar overflow-hidden font-medium">
-      <div
-        className="flex flex-col justify-between border border-gray-400 rounded-xl w-1/2 h-[90vh] mx-auto m-10 no-scrollbar bg-white text-black"
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
-      >
-        <div className="overflow-y-auto overflow-x-hidden no-scrollbar">
-          <div className="border border-white/30 w-fit mt-4 ml-4 mr-4 mb-2  p-4 rounded-2xl bg-green-500">
-            Welcome To VisualSense
-          </div>
-          {/* Camera component */}
-          {showCamera && (
-            <div className="max-w-80 m-4">
-              <video
-                className="w-full rounded-md"
-                autoPlay
-                playsInline
-                muted
-                onClick={handleCaptureImage} // Add onClick event to trigger capture
-                ref={(video) => {
-                  if (video && cameraStream) {
-                    video.srcObject = cameraStream;
-                  }
-                }}
-              />
+    <div className="no-scrollbar overflow-hidden font-extrabold">
+      <div className="flex justify-center items-center gap-0">
+        <div
+          className="flex flex-col justify-between border-[0.1px] border-white/40 rounded-xl w-[65%] h-[90vh] mx-auto m-10 no-scrollbar bg-black"
+          onDrop={handleDrop}
+          onDragOver={handleDragOver}
+        >
+          <div className="overflow-y-auto overflow-x-hidden no-scrollbar">
+            <div className="border border-white/30 w-fit mt-4 ml-4 mr-4 mb-2  p-4 rounded-2xl bg-green-500 text-3xl">
+              Welcome To VisualSense
             </div>
-          )}
-          <div className="flex flex-col justify-start items-start bg-black">
-            {imagePreview && (
-              <div className="max-w-96 mb-4 ml-4 mr-4 mt-2 self-start justify-self-start ">
-                <img
-                  src={imagePreview}
-                  alt="Uploaded Preview"
-                  className=" rounded-sm"
-                  onClick={handleRemoveImage}
+            {/* Camera component */}
+            {showCamera && (
+              <div className="max-w-80 m-4">
+                <video
+                  className="w-full rounded-md"
+                  autoPlay
+                  playsInline
+                  muted
+                  onClick={handleCaptureImage} // Add onClick event to trigger capture
+                  ref={(video) => {
+                    if (video && cameraStream) {
+                      video.srcObject = cameraStream;
+                    }
+                  }}
                 />
               </div>
             )}
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={`border border-white/30 w-fit m-4 mt-1 p-4 px-10 rounded-2xl
+            <div className="flex flex-col justify-start items-start bg-black">
+              {imagePreview && (
+                <div className="max-w-96 mb-4 ml-4 mr-4 mt-2 self-start justify-self-start ">
+                  <img
+                    src={imagePreview}
+                    alt="Uploaded Preview"
+                    className=" rounded-sm"
+                    onClick={handleRemoveImage}
+                  />
+                </div>
+              )}
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={`border border-white/30 w-fit m-4 mt-1 p-4 px-10 rounded-2xl text-3xl
             ${message.type === "prompt" ? "bg-blue-500" : "bg-green-500"}`}
-              >
-                <p className="text-white">{message.text}</p>
-              </div>
-            ))}
+                >
+                  <p className="text-white">{message.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-evenly items-center justify-self-end  border-t-[0.1px]  border-white/40 p-5 h-fit">
+            <input
+              type="text"
+              placeholder="Type your prompt here"
+              value={prompt}
+              onChange={(e) => setPrompt(e.target.value)}
+              className="borde px-3 py-10 text-4xl mx-2 rounded-md flex-1  bg-black outline-none"
+              required
+            />
           </div>
         </div>
-        <div className="flex justify-evenly items-center justify-self-end border-t border-gray-400 p-5 h-fit">
-          <div className="flex items-center justify-center">
+        <div className="flex flex-col justify-evenly items-center  border-t-[0.1px] border  border-white/40 p-5 h-screen my-10">
+          <div className="flex tems-center justify-center">
             <input
               type="file"
               onChange={handleFileChange}
@@ -256,28 +268,19 @@ const ChatApp = () => {
               id="fileInput"
             />
             <label htmlFor="fileInput" className="">
-              <FaPlus size={20} />
+              <FaPlus size={70} />
             </label>
             <span id="fileName" className="ml-2"></span>
           </div>
 
-          <IoMdMic onClick={startListening} size={25} className="mx-2" />
-          <IoMdCamera onClick={handleCameraClick} size={30} className="mx-2" />
+          <IoMdMic onClick={startListening} size={70} className="mx-2" />
+          <IoMdCamera onClick={handleCameraClick} size={70} className="mx-2" />
 
-          <input
-            type="text"
-            placeholder="Type your prompt here"
-            value={prompt}
-            onChange={(e) => setPrompt(e.target.value)}
-            className="border border-white/30 px-2 py-3 mx-2 rounded-md flex-1 bg-black outline-none"
-            required
-          />
-
-          <IoMdSend onClick={handleUpload} size={30} />
+          <IoMdSend onClick={handleUpload} size={70} />
         </div>
       </div>
     </div>
   );
 };
 
-export default ChatApp;
+export default Glaucoma;

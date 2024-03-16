@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { IoMdCamera, IoMdMic, IoMdSend } from "react-icons/io";
 import { FaPlus } from "react-icons/fa";
 
-const ChatApp = () => {
+const Achromatopsia = () => {
   const [file, setFile] = useState(null);
   const [prompt, setPrompt] = useState("");
   const [messages, setMessages] = useState([]);
@@ -280,4 +280,4 @@ const ChatApp = () => {
   );
 };
 
-export default ChatApp;
+export default Achromatopsia;

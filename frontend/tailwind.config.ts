@@ -59,7 +59,7 @@ module.exports = {
           },
           "100%": {
             opacity: 1,
-            transform: "translate(-50%,-40%) scale(1.3)",
+            transform: "translate(-50%,-40%) scale(1.7)",
           },
         },
       },
