@@ -17,13 +17,21 @@ developing a web application that utilizes Visual Question Answering (VQA) techn
 </p>
 
 <h2>Features:</h2>
-* Real-time Image Analysis: Instantly analyze images from the device's camera. 
-* Interactive Questioning: Users ask questions about image content using natural language. 
-* AI-driven Answering: Spoken answers generated based on image analysis and user queries. 
-* Flexible Image Upload: Ability to upload images for analysis from device storage. 
-* Accessibility Features: User-friendly interface with compatibility for screen readers. 
-* Promotes Independence: Empowers visually impaired individuals to access visual information independently. 
+ 
+* Real-time Image Analysis: Instantly analyze images from the device's camera.
+
+* Interactive Questioning: Users ask questions about image content using natural language.
+
+* AI-driven Answering: Spoken answers generated based on image analysis and user queries.
+  
+* Flexible Image Upload: Ability to upload images for analysis from device storage.
+  
+* Accessibility Features: User-friendly interface with compatibility for screen readers.
+  
+* Promotes Independence: Empowers visually impaired individuals to access visual information independently.
+  
 * Inclusion: Reduces reliance on sighted assistance, fostering greater inclusion.
+
 
 
 
